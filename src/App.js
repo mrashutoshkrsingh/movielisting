@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LazyLoad, { lazyload } from "react-lazyload";
+// import LazyLoad, { lazyload } from "react-lazyload";
 import ReactImageAppear from "react-image-appear";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
