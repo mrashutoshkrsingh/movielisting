@@ -7,6 +7,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import axios from "axios";
 import "./App.css";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,6 +70,7 @@ const App = () => {
                   src={`https://image.tmdb.org/t/p/w500${tile.poster_path}`}
                   alt={tile.title}
                 /> */}
+
                   <ReactImageAppear
                     src={`https://image.tmdb.org/t/p/w500${tile.poster_path}`}
                     animation="blurIn"
@@ -77,12 +79,13 @@ const App = () => {
                     // loaderStyle={{ border: "2px solid red" }}
                     // showLoader={false}
                   />
-                  <div className="overlay">
-                    <div>{tile.overview.slice(0, 50) + "..."}</div>
-                    <div>
+                  <Link to={"/" + tile.id} className="overlay">
+                    <div className="like">
                       <i className="fa fa-thumbs-o-up" />
                     </div>
-                  </div>
+
+                    <span className="tooltiptext">{tile.overview}</span>
+                  </Link>
                 </GridListTile>
               ))}
             </GridList>
