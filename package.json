@@ -20,7 +20,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start1": "node server.js",
+    "start": "react-scripts start",
     "dev": "PORT=4001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
